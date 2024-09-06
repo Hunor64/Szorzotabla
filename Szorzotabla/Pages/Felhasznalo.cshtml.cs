@@ -7,9 +7,9 @@ namespace Szorzotabla.Pages
     public class FelhasznaloModel : PageModel
     {
         [BindProperty]
-        public Fehasznalo ujFelhasznalo { get; set; } = new Fehasznalo();
+        public Felhasznalok ujFelhasznalo { get; set; } = new Felhasznalok();
 
-        public List<Fehasznalo> felhasznalok { get; set; } = new List<Fehasznalo>();
+        public List<Felhasznalok> felhasznalok { get; set; } = new List<Felhasznalok>();
 
         public void OnGet()
         {
