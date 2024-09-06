@@ -10,4 +10,23 @@
     <input type="number" name="szulev" value="2000"/>
     <input type="submit" />
 </form>
-
+<h2>Felhasználók listája</h2>
+<table class="table">
+    <thead>
+        <tr>
+            <th>Név</th>
+            <th>Email</th>
+            <th>Születési év</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var f in Model.felhasznalok)
+        {
+            <tr>
+                <td>@f.Nev</td>
+                <td>@f.Email</td>
+                <td>@f.SzulEv</td>
+            </tr>
+        }
+    </tbody>
+</table>
