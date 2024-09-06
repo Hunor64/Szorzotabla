@@ -1,0 +1,37 @@
+﻿@page
+@model Szorzotabla.Pages.SzorzotablaModel
+@{
+    ViewData["Title"] = "Szorzótábla";
+}
+
+<h1>Szorzótábla</h1>
+<form method="post">
+    <label>Add meg a szorzótábla max tényezőjét:</label>
+    <input type="number" name="maxTenyezo" />
+    <button type="submit"/>
+</form>
+<div>
+    <table class="table">
+        <thead>
+            <tr>
+                <th></th>
+                @for(int i = 1; i <= Model.MaxTenyezo; i++)
+                {
+                    <th>@i</th>
+                }
+            </tr>
+        </thead>
+        <tbody>
+            @for (int i = 1; i <= Model.MaxTenyezo; i++)
+            {
+            <tr>
+                <th>@i</th> 
+                    @for(int j = 1; j <= Model.MaxTenyezo; j++)
+                    {
+                        <td>@(i*j)</td>
+                    }
+            </tr>
+            }
+        </tbody>
+    </table>
+</div>
